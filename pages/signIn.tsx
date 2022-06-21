@@ -22,7 +22,7 @@ export const SignInPage = () => {
 							type="checkbox"
 							name="remenberMe"
 							id="remenberMe"
-							className="scale-110 text-pink-500"
+							className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
 						/>
 						<span className="text-slate-400">Lembrar-me</span>
 					</div>

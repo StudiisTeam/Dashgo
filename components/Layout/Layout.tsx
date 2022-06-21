@@ -11,7 +11,7 @@ export const Layout = ({ children }: LayoutProps) => {
 			<Head>
 				<title>DashGo</title>
 			</Head>
-			<div className="dark:bg-gray-900 min-h-screen dark:text-gray-50 font-sans">
+			<div>
 				<main>{children}</main>
 			</div>
 		</>
