@@ -8,6 +8,11 @@ import {
 export const Header = () => {
 	return (
 		<header className="flex w-full max-w-screen-2xl h-20 mx-auto px-6 pt-4 items-center">
+			<button className="flex flex-col gap-1 mr-4 md:hidden">
+				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
+				<div className="w-6 h-[3px] bg-slate-100"></div>
+				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
+			</button>
 			<span className="text-3xl font-medium tracking-tight	md:w-64">
 				dashgo
 				<span className="text-pink-500 ml-[1px]">.</span>
