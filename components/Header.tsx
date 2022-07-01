@@ -32,17 +32,11 @@ export const Header = () => {
 				</button>
 			</label>
 			<div className="flex items-center ml-auto ">
-				<div className="flex items-center flex-1  gap-4 px-4 py-1 mr-8 border-r border-r-gray-700">
+				<div className="flex items-center flex-1  gap-4 px-4 py-1 mr-4 border-r border-r-gray-700">
 					<RiNotificationLine size={20} />
 					<RiUserAddLine size={20} />
 				</div>
 				<div className="flex items-center">
-					<div className="mr-4 hidden lg:flex lg:flex-col text-right">
-						<span>Matheus Fontenele</span>
-						<span className="text-sm text-gray-300">
-							matheus.fontenele@icloud.com
-						</span>
-					</div>
 					<img
 						className=" h-12 w-12 rounded-full"
 						src="https://avatars.githubusercontent.com/u/94790993?v=4"

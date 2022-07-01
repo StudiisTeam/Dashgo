@@ -85,33 +85,56 @@ const radialSeries = [44, 55, 67, 83];
 
 export const DashboardPage = () => {
 	return (
-		<div className="">
+		<div className="w-full">
 			<Header />
 			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6">
 				<Sidebar />
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1">
-					<div className="p-8 bg-gray-800 rounded-lg pb-4">
-						<span className="text-lg mb-8 font-bold text-gray-400">
-							Gasto mensal
-						</span>
-						<Chart height={160} type="area" options={options} series={series} />
+				<div className="w-full">
+					<div className="my-8 flex gap-4">
+						<div className="flex-1 bg-slate-800 rounded-lg p-8">
+							<div className="flex items-center justify-between border-b-2 border-b-slate-700 pb-4">
+								<span>Fontenele&apos;s expance</span>
+								<span>Current usage period (Jun 8 to Jul 8)</span>
+							</div>
+						</div>
+						<div className="w-56 h-56 hidden bg-slate-800 lg:flex items-center justify-center rounded-lg">
+							adicione uma imagem
+						</div>
 					</div>
-					<div className="p-8 bg-gray-800 rounded-lg">
-						<span className="text-lg mb-8 font-bold text-gray-400">
-							Gasto mensal
-						</span>
-						<Chart height={160} type="area" options={options} series={series} />
-					</div>
-					<div className="p-8 bg-gray-800 rounded-lg max-w-[350px] mx-auto md:mx-0">
-						<span className="text-lg mb-8 font-bold text-gray-400">
-							Gasto mensal
-						</span>
-						<Chart
-							height={350}
-							type="radialBar"
-							options={radialOptions}
-							series={radialSeries}
-						/>
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1">
+						<div className="p-8 bg-slate-800 rounded pb-4">
+							<span className="text-lg mb-8 font-bold text-gray-400">
+								Gasto mensal
+							</span>
+							<Chart
+								height={160}
+								type="area"
+								options={options}
+								series={series}
+							/>
+						</div>
+						<div className="p-8 bg-slate-800 rounded">
+							<span className="text-lg mb-8 font-bold text-gray-400">
+								Gasto mensal
+							</span>
+							<Chart
+								height={160}
+								type="area"
+								options={options}
+								series={series}
+							/>
+						</div>
+						<div className="p-8 bg-slate-800 rounded max-w-[350px] mx-auto md:mx-0">
+							<span className="text-lg mb-8 font-bold text-gray-400">
+								Gasto mensal
+							</span>
+							<Chart
+								height={350}
+								type="radialBar"
+								options={radialOptions}
+								series={radialSeries}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
