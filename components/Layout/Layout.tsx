@@ -9,7 +9,7 @@ export const Layout = ({ children }: LayoutProps) => {
 	return (
 		<>
 			<Head>
-				<title>DashGo</title>
+				<title>dashgo.</title>
 			</Head>
 			<div>
 				<main>{children}</main>
