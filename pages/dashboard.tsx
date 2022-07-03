@@ -87,7 +87,7 @@ const radialSeries = [44, 55, 67, 83];
 
 export const DashboardPage = () => {
 	return (
-		<div className="w-full">
+		<div className="w-full relative">
 			<Header />
 			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6 relative">
 				<Sidebar />
@@ -181,10 +181,106 @@ export const DashboardPage = () => {
 									series={radialSeries}
 								/>
 							</div>
-							<div className="p-8 flex-1 bg-[#151a1e] rounded">
-								<span className="text-lg font-bold text-gray-400">
+							<div className="p-8 flex-1 h-[420px] bg-[#151a1e] rounded overflow-y-scroll">
+								<span className=" text-lg font-bold text-gray-400">
 									Last transactions
 								</span>
+
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+
 								<div className="flex mt-8 items-center justify-between">
 									<div className="flex items-center gap-3">
 										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
