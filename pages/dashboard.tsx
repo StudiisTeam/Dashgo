@@ -1,6 +1,8 @@
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/SIdebar";
 import dynamic from "next/dynamic";
+import netflixLogo from "../public/netflix.png";
+import Image from "next/image";
 
 const Chart = dynamic(() => import("react-apexcharts"), {
 	ssr: false,
@@ -87,11 +89,11 @@ export const DashboardPage = () => {
 	return (
 		<div className="w-full">
 			<Header />
-			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6">
+			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6 relative">
 				<Sidebar />
-				<div className="w-full">
-					<div className="my-8 flex  gap-4">
-						<div className="flex-1 flex flex-col justify-between bg-[#151a1e] rounded-lg p-8">
+				<div className="w-full flex">
+					<div className="">
+						<div className="flex-1 flex mb-4 flex-col justify-between bg-[#151a1e] rounded-lg p-8">
 							<div className="flex items-center justify-between border-b-2 border-b-slate-700 pb-4">
 								<span className="font-medium text-lg">
 									Fontenele&apos;s expance
@@ -141,44 +143,85 @@ export const DashboardPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className="w-56 h-56 hidden lg:flex items-center justify-center rounded-lg bg-gradient-to-br from-pink-800 to-pink-500 font-medium text-lg">
-							Adicione uma imagem
+
+						<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1">
+							<div className="p-8 bg-[#151a1e] rounded pb-4">
+								<span className="text-lg mb-8 font-bold text-gray-400">
+									Renda mensal
+								</span>
+								<Chart
+									height={160}
+									type="area"
+									options={options}
+									series={series}
+								/>
+							</div>
+							<div className="p-8 bg-[#151a1e] rounded">
+								<span className="text-lg mb-8 font-bold text-gray-400">
+									Gasto mensal
+								</span>
+								<Chart
+									height={160}
+									type="area"
+									options={options}
+									series={series}
+								/>
+							</div>
+						</div>
+
+						<div className="flex mt-4 gap-4">
+							<div className="p-8 bg-[#151a1e] rounded max-w-[350px] mx-auto md:mx-0">
+								<span className="text-lg mb-8 font-bold text-gray-400">
+									Gasto mensal
+								</span>
+								<Chart
+									height={350}
+									type="radialBar"
+									options={radialOptions}
+									series={radialSeries}
+								/>
+							</div>
+							<div className="p-8 flex-1 bg-[#151a1e] rounded">
+								<span className="text-lg font-bold text-gray-400">
+									Last transactions
+								</span>
+								<div className="flex mt-8 items-center justify-between">
+									<div className="flex items-center gap-3">
+										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+											<Image width={20} height={20} src={netflixLogo} alt="" />
+										</div>
+										<div className="flex flex-col">
+											<span>Netflix</span>
+											<span className="text-xs text-gray-500">
+												Entertrainmet
+											</span>
+										</div>
+									</div>
+									<span className="text-red-600">-R$30</span>
+									<div className="flex flex-col">
+										<span>Mar 6, 2022</span>
+										<span className="text-xs text-gray-500">03:32PM</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1">
-						<div className="p-8 bg-[#151a1e] rounded pb-4">
-							<span className="text-lg mb-8 font-bold text-gray-400">
-								Gasto mensal
-							</span>
-							<Chart
-								height={160}
-								type="area"
-								options={options}
-								series={series}
-							/>
-						</div>
-						<div className="p-8 bg-[#151a1e] rounded">
-							<span className="text-lg mb-8 font-bold text-gray-400">
-								Gasto mensal
-							</span>
-							<Chart
-								height={160}
-								type="area"
-								options={options}
-								series={series}
-							/>
-						</div>
-						<div className="p-8 bg-[#151a1e] rounded max-w-[350px] mx-auto md:mx-0">
-							<span className="text-lg mb-8 font-bold text-gray-400">
-								Gasto mensal
-							</span>
-							<Chart
-								height={350}
-								type="radialBar"
-								options={radialOptions}
-								series={radialSeries}
-							/>
-						</div>
+
+					<div className="flex-1 mx-4 h-[85vh]">
+						<ul className="bg-[#151a1e] w-full h-full rounded-lg p-8">
+							<li className="flex items-center justify-between">
+								<div className="flex items-center gap-3">
+									<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
+										<Image width={20} height={20} src={netflixLogo} alt="" />
+									</div>
+									<div className="flex flex-col">
+										<span>Netflix</span>
+										<span className="text-xs text-gray-500">Mar 6, 2022</span>
+									</div>
+								</div>
+								<span className="text-red-600">-R$30</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

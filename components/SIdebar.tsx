@@ -7,7 +7,7 @@ import {
 
 export function Sidebar() {
 	return (
-		<aside className=" w-52 lg:w-64 mr-8  hidden md:block">
+		<aside className=" w-52 mr-8  hidden md:block sticky top-2">
 			<div className="gap-12 flex items-start flex-col">
 				<div className="">
 					<span className="font-bold text-gray-400">GERAL</span>

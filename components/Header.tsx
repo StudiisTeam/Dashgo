@@ -20,14 +20,14 @@ export const Header = () => {
 
 			<label
 				htmlFor=""
-				className=" flex justify-between items-center flex-1  pl-4 ml-6 max-w-sm md:relative md:bg-gray-800 self-center text-gray-200 rounded-full fixed bottom-10 right-5 md:bottom-0 md:right-0"
+				className=" flex justify-between items-center flex-1  pl-4 ml-6 max-w-sm md:relative md:bg-black self-center text-gray-200 rounded-full fixed bottom-10 right-5 md:bottom-0 md:right-0"
 			>
 				<input
 					type="text"
 					className="hidden md:block bg-transparent px-4 mr-4 text-gray-50 placeholder:text-gray-400 outline-none"
 					placeholder="Buscar na plataforma"
 				/>
-				<button className="rounded-full bg-gray-800 w-12 h-12 flex justify-center items-center mr-4">
+				<button className="rounded-full bg-black w-12 h-12 flex justify-center items-center mr-4">
 					<RiSearchLine size={20} />
 				</button>
 			</label>
