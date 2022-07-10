@@ -1,21 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
+import { Dialog, Transition } from "@headlessui/react";
 import { useState } from "react";
 import {
 	RiNotificationLine,
 	RiSearchLine,
 	RiUserAddLine,
 } from "react-icons/ri";
-import { Modal } from "./Modal";
 
 export const Header = () => {
-	const [modalSearchIsOpen, setModalSearchIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-	function handleOpenModal() {
-		setModalSearchIsOpen(true);
+	function closeModal() {
+		setIsOpen(false);
 	}
+
+	function openModal() {
+		setIsOpen(true);
+	}
+
 	return (
 		<header className="flex w-full max-w-screen-2xl h-20 mx-auto px-6 pt-4 items-center">
-			<button className="flex flex-col gap-1 mr-4 md:hidden">
+			<button className="flex flex-col gap-1 mr-4 lg:hidden">
 				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
 				<div className="w-6 h-[3px] bg-slate-100"></div>
 				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
@@ -26,7 +31,7 @@ export const Header = () => {
 			</span>
 
 			<div
-				onClick={handleOpenModal}
+				onClick={() => setIsOpen(true)}
 				className="flex justify-between items-center flex-1  pl-4 ml-6 max-w-sm md:relative md:bg-black self-center text-gray-200 rounded-full fixed bottom-10 right-5 md:bottom-0 md:right-0 cursor-pointer hover:bg-[#0d1316]"
 			>
 				<span className="hidden md:block bg-transparent px-4 mr-4 text-gray-400 placeholder:text-gray-400 outline-none">
@@ -37,28 +42,47 @@ export const Header = () => {
 				</button>
 			</div>
 
-			{modalSearchIsOpen && (
-				<Modal>
-					<div className="w-full">
-						<div className="w-full flex items-center p-4 gap-4 border-b border-b-gray-800">
-							<RiSearchLine size={20} />
-							<input
-								type="text"
-								className="w-full bg-transparent outline-none"
-								placeholder="Buscar na plataforma"
-							/>
-						</div>
+			<Transition appear show={isOpen}>
+				<Dialog as="div" className="relative z-10 " onClose={closeModal}>
+					<Transition.Child
+						enter="ease-out duration-300"
+						enterFrom="opacity-0"
+						enterTo="opacity-100"
+						leave="ease-in duration-200"
+						leaveFrom="opacity-100"
+						leaveTo="opacity-0"
+					>
+						<div className="fixed inset-0 bg-black blur-sm bg-opacity-25" />
+					</Transition.Child>
 
-						<div className="w-full min-h-[150px]">
-							<div className="flex justify-center items-center h-[100px]">
-								<span className="text-gray-500 font-medium ">
-									No recent searches
-								</span>
-							</div>
+					<div className="fixed inset-0 overflow-y-auto bg-[#151a1ec4] ">
+						<div className="flex min-h-full items-start justify-center p-4 text-center w-full">
+							<Transition.Child
+								enter="ease-out duration-300"
+								enterFrom="opacity-0 scale-95"
+								enterTo="opacity-100 scale-100"
+								leave="ease-in duration-200"
+								leaveFrom="opacity-100 scale-100"
+								leaveTo="opacity-0 scale-95"
+							>
+								<Dialog.Panel className="gap-4 w-[80vw] max-w-2xl mt-[5vh] transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-[#151a1e]">
+									<div className="flex items-center gap-4 border-b border-b-gray-800 p-4">
+										<RiSearchLine size={20} />
+										<input
+											type="text"
+											className="bg-transparent outline-none w-full"
+											placeholder="Buscar na plataforma"
+										/>
+									</div>
+									<div className="w-full h-[150px] flex items-center justify-center">
+										<span>No recent searches</span>
+									</div>
+								</Dialog.Panel>
+							</Transition.Child>
 						</div>
 					</div>
-				</Modal>
-			)}
+				</Dialog>
+			</Transition>
 
 			<div className="flex items-center ml-auto ">
 				<div className="flex items-center flex-1  gap-4 px-4 py-1 mr-4 border-r border-r-gray-700">
