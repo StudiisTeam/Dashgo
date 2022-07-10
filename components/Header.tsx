@@ -43,20 +43,9 @@ export const Header = () => {
 			</div>
 
 			<Transition appear show={isOpen}>
-				<Dialog as="div" className="relative z-10 " onClose={closeModal}>
-					<Transition.Child
-						enter="ease-out duration-300"
-						enterFrom="opacity-0"
-						enterTo="opacity-100"
-						leave="ease-in duration-200"
-						leaveFrom="opacity-100"
-						leaveTo="opacity-0"
-					>
-						<div className="fixed inset-0 bg-black blur-sm bg-opacity-25" />
-					</Transition.Child>
-
-					<div className="fixed inset-0 overflow-y-auto bg-[#151a1ec4] ">
-						<div className="flex min-h-full items-start justify-center p-4 text-center w-full">
+				<Dialog as="div" onClose={closeModal}>
+					<div className="fixed inset-0">
+						<div className="flex min-h-full items-start justify-center p-4 text-center w-full bg-[#0d1316b9]">
 							<Transition.Child
 								enter="ease-out duration-300"
 								enterFrom="opacity-0 scale-95"
@@ -65,8 +54,8 @@ export const Header = () => {
 								leaveFrom="opacity-100 scale-100"
 								leaveTo="opacity-0 scale-95"
 							>
-								<Dialog.Panel className="gap-4 w-[80vw] max-w-2xl mt-[5vh] transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-[#151a1e]">
-									<div className="flex items-center gap-4 border-b border-b-gray-800 p-4">
+								<Dialog.Panel className="gap-4 w-[80vw] max-w-2xl mt-[5vh] transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all bg-[#141c20]">
+									<div className="flex items-center gap-4 border-b border-b-gray-800 p-4 z-50">
 										<RiSearchLine size={20} />
 										<input
 											type="text"
