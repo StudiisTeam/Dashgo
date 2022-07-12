@@ -80,7 +80,7 @@ export const Header = () => {
 				</div>
 				<div className="flex items-center">
 					<img
-						className=" h-12 w-12 rounded-full"
+						className=" h-12 w-12 rounded-full border-2 border-white"
 						src="https://avatars.githubusercontent.com/u/94790993?v=4"
 						alt="profileAvatar"
 					/>
