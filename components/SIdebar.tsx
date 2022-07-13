@@ -20,6 +20,22 @@ export function Sidebar() {
 							<RiContactsLine />
 							<span className="font-medium">Usuarios</span>
 						</a>
+						<a href="" className="flex items-center gap-4 text-pink-400">
+							<RiDashboardLine />
+							<span className="font-medium">Dashboard</span>
+						</a>
+						<a href="" className="flex items-center gap-4 ">
+							<RiContactsLine />
+							<span className="font-medium">Usuarios</span>
+						</a>
+						<a href="" className="flex items-center gap-4 text-pink-400">
+							<RiDashboardLine />
+							<span className="font-medium">Dashboard</span>
+						</a>
+						<a href="" className="flex items-center gap-4 ">
+							<RiContactsLine />
+							<span className="font-medium">Usuarios</span>
+						</a>
 					</div>
 				</div>
 				<div className="">
