@@ -32,10 +32,6 @@ export function Sidebar() {
 							<RiDashboardLine />
 							<span className="font-medium">Dashboard</span>
 						</a>
-						<a href="" className="flex items-center gap-4 ">
-							<RiContactsLine />
-							<span className="font-medium">Usuarios</span>
-						</a>
 					</div>
 				</div>
 				<div className="">
