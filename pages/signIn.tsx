@@ -2,7 +2,7 @@ export const SignInPage = () => {
 	return (
 		<div className="w-screen h-screen flex justify-center items-center">
 			<form className="w-full max-w-sm flex flex-col  dark:bg-gray-800 p-8 rounded-lg">
-				<h1 className="text-2xl font-medium mb-10">Fazer Login</h1>
+				<h1 className="text-2xl font-medium mb-10">Login</h1>
 				<input
 					name="email"
 					type="email"
