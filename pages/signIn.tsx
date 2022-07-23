@@ -38,6 +38,12 @@ export const SignInPage = () => {
 					Entrar
 				</button>
 			</form>
+			<button
+				type="button"
+				className="w-full h-12 dark:bg-gray-900 rounded-lg mt-11"
+			>
+				Criar Conta
+			</button>
 		</div>
 	);
 };
