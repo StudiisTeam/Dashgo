@@ -45,6 +45,14 @@ export function Sidebar() {
 							<RiGitMergeLine />
 							<span className="font-medium">Automacao</span>
 						</a>
+						<a href="" className="flex items-center gap-4 ">
+							<RiGitMergeLine />
+							<span className="font-medium">Automacao</span>
+						</a>
+						<a href="" className="flex items-center gap-4 ">
+							<RiGitMergeLine />
+							<span className="font-medium">Automacao</span>
+						</a>
 					</div>
 				</div>
 			</div>
