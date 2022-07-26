@@ -37,7 +37,7 @@ export const Header = () => {
 				<span className="hidden md:block bg-transparent px-4 mr-4 text-gray-400 placeholder:text-gray-400 outline-none">
 					Buscar na plataforma
 				</span>
-				<button className="rounded-full md:bg-transparent bg-black w-12 h-12 flex justify-center items-center mr-4">
+				<button className="rounded-full md:bg-transparent bg-black w-12 h-12 flex justify-center items-center mr-4 z-20">
 					<RiSearchLine size={20} />
 				</button>
 			</div>
