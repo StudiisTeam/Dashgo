@@ -37,6 +37,12 @@ export const SignInPage = () => {
 				>
 					Entrar
 				</button>
+				<button
+					type="submit"
+					className="w-full h-12 dark:bg-pink-700 rounded-lg mt-11"
+				>
+					Entrar
+				</button>
 			</form>
 		</div>
 	);
