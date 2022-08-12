@@ -113,8 +113,8 @@ export const DashboardPage = () => {
 				<Sidebar />
 				<div className="w-full flex flex-col xl:flex-row gap-4">
 					<div className="">
-						<div className="flex-1 flex mb-4 flex-col justify-between bg-[#151a1e] rounded-lg p-8">
-							<div className="flex items-center justify-between border-b-2 border-b-slate-700 pb-4">
+						<div className="flex-1 flex mb-4 flex-col justify-between shadow-lg bg-white dark:bg-[#151a1e] rounded-lg p-8">
+							<div className="flex items-center justify-between border-b-2 border-b-slate-200 dark:border-b-slate-700 pb-4">
 								<div className="flex flex-col">
 									<span className="font-medium text-lg">
 										Fontenele&apos;s expance
@@ -142,7 +142,7 @@ export const DashboardPage = () => {
 										leaveFrom="transform opacity-100 scale-100"
 										leaveTo="transform opacity-0 scale-95"
 									>
-										<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+										<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md dark:bg-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
 											<div className="px-1 py-1">
 												<Menu.Item>
 													{({ active }) => (
@@ -175,7 +175,7 @@ export const DashboardPage = () => {
 							</div>
 
 							<div className=" flex md:justify-center gap-4 w-full flex-wrap mt-8">
-								<div className="bg-[#1c2126] rounded-lg w-full md:w-52 font-medium overflow-hidden">
+								<div className="bg-[#1c2126] rounded-lg w-full md:w-48 font-medium overflow-hidden">
 									<div className="w-full h-[6px] relative bg-gray-700 before:content-[' '] before:absolute before:h-[6px] before:bg-pink-500 before:w-[80%] before:z-0" />
 									<div className="text-gray-500 p-4 flex flex-col">
 										<span className="text-gray-300">Balance</span>
@@ -185,7 +185,7 @@ export const DashboardPage = () => {
 									</div>
 								</div>
 
-								<div className="bg-[#1c2126] rounded-lg w-full md:w-52 font-medium overflow-hidden ">
+								<div className="bg-[#1c2126] rounded-lg w-full md:w-48 font-medium overflow-hidden ">
 									<div className="w-full h-[6px] relative bg-gray-700 before:content-[' '] before:absolute before:h-[6px] before:bg-pink-500 before:w-[50%]" />
 									<div className="text-gray-500 p-4 flex flex-col">
 										<span className="text-gray-300">Fixed expense</span>
@@ -195,7 +195,7 @@ export const DashboardPage = () => {
 									</div>
 								</div>
 
-								<div className="bg-[#1c2126] rounded-lg w-full md:w-52 font-medium overflow-hidden ">
+								<div className="bg-[#1c2126] rounded-lg w-full md:w-48 font-medium overflow-hidden ">
 									<div className="w-full h-[6px] relative bg-gray-700 before:content-[' '] before:absolute before:h-[6px] before:bg-pink-500 before:w-[80%]" />
 									<div className="text-gray-500 p-4 flex flex-col">
 										<span className="text-gray-300">Balance</span>
@@ -205,7 +205,7 @@ export const DashboardPage = () => {
 									</div>
 								</div>
 
-								<div className="bg-[#1c2126] rounded-lg w-full md:w-52 font-medium overflow-hidden ">
+								<div className="bg-[#1c2126] rounded-lg w-full md:w-48 font-medium overflow-hidden ">
 									<div className="w-full h-[6px] relative bg-gray-700 before:content-[' '] before:absolute before:h-[6px] before:bg-pink-500 before:w-[80%] before:z-0" />
 									<div className="text-gray-500 p-4 flex flex-col">
 										<span className="text-gray-300">asd</span>
@@ -218,7 +218,7 @@ export const DashboardPage = () => {
 						</div>
 
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1">
-							<div className="p-4 bg-[#151a1e] rounded pb-4">
+							<div className="p-4 shadow-lg bg-white dark:bg-[#151a1e] rounded pb-4">
 								<span className="text-lg mb-8 font-bold text-gray-400">
 									Renda mensal
 								</span>
@@ -229,7 +229,7 @@ export const DashboardPage = () => {
 									series={series}
 								/>
 							</div>
-							<div className="p-4 bg-[#151a1e] rounded">
+							<div className="p-4 shadow-lg bg-white dark:bg-[#151a1e] rounded">
 								<span className="text-lg mb-8 font-bold text-gray-400">
 									Gasto mensal
 								</span>
@@ -243,7 +243,7 @@ export const DashboardPage = () => {
 						</div>
 
 						<div className="flex flex-col md:flex-row mt-4 gap-4">
-							<div className=" bg-[#151a1e] rounded py-8 w-full md:max-w-sm">
+							<div className="shadow-lg bg-white dark:bg-[#151a1e] rounded py-8 w-full md:max-w-sm">
 								<Chart
 									height={270}
 									type="radialBar"
@@ -251,7 +251,7 @@ export const DashboardPage = () => {
 									series={radialSeries}
 								/>
 							</div>
-							<div className="p-8 flex-1 h-[315px] bg-[#151a1e] rounded overflow-y-scroll">
+							<div className="p-8 flex-1 h-[315px] shadow-lg bg-white dark:bg-[#151a1e] rounded overflow-y-scroll">
 								<span className=" text-lg font-bold text-gray-400">
 									Last transactions
 								</span>
@@ -373,7 +373,7 @@ export const DashboardPage = () => {
 						</div>
 					</div>
 
-					<div className="flex-1 flex justify-between gap-4 flex-col  h-full bg-[#151a1e] rounded-lg p-8">
+					<div className="flex-1 flex justify-between gap-4 flex-col h-full shadow-lg bg-white dark:bg-[#151a1e] rounded-lg p-8">
 						<div className="flex items-center justify-between">
 							<div className="flex items-center gap-3">
 								<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
