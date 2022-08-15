@@ -20,7 +20,7 @@ export const Header = () => {
 
 	return (
 		<header className="flex w-full max-w-screen-2xl h-20 mx-auto px-6 pt-4 items-center">
-			<button className="flex flex-col gap-1 mr-4 lg:hidden">
+			<button className="flex flex-col gap-1 mr-4">
 				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
 				<div className="w-6 h-[3px] bg-slate-100"></div>
 				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
