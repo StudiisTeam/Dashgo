@@ -97,6 +97,7 @@ const radialSeries = [44, 55, 67, 83];
 
 export const DashboardPage = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
 
 	function closeModal() {
 		setIsOpen(false);
@@ -109,8 +110,12 @@ export const DashboardPage = () => {
 	return (
 		<div className="w-full relative">
 			<Header />
+			{
+				sidebarIsOpen && (
+					<Sidebar />
+				)
+			}
 			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6 relative">
-				<Sidebar />
 				<div className="w-full flex flex-col xl:flex-row gap-4">
 					<div className="">
 						<div className="flex-1 flex mb-4 flex-col justify-between shadow-lg bg-white dark:bg-[#151a1e] rounded-lg p-8">
