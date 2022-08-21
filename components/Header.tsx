@@ -19,7 +19,7 @@ export const Header = () => {
 	}
 
 	return (
-		<header className="flex w-full max-w-screen-2xl h-20 mx-auto px-6 pt-4 items-center">
+		<header className="flex w-full max-w-screen-2xl h-20 mx-auto px-6 pt-4 items-center z-10">
 			<button className="flex flex-col gap-1 mr-4">
 				<div className="w-4 h-[3px] mx-auto bg-slate-100"></div>
 				<div className="w-6 h-[3px] bg-slate-100"></div>
@@ -37,7 +37,7 @@ export const Header = () => {
 				<span className="hidden md:block bg-transparent px-4 mr-4 text-gray-400 placeholder:text-gray-400 outline-none">
 					Buscar na plataforma
 				</span>
-				<button className="rounded-full md:bg-transparent bg-black w-12 h-12 flex justify-center items-center mr-4 z-20">
+				<button className="rounded-full md:bg-transparent bg-black w-12 h-12 flex justify-center items-center mr-4 z-10">
 					<RiSearchLine size={20} />
 				</button>
 			</div>

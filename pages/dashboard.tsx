@@ -109,12 +109,12 @@ export const DashboardPage = () => {
 
 	return (
 		<div className="w-full relative">
-			<Header />
 			{
 				sidebarIsOpen && (
 					<Sidebar />
 				)
 			}
+			<Header />
 			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6 relative">
 				<div className="w-full flex flex-col xl:flex-row gap-4">
 					<div className="">

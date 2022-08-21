@@ -7,9 +7,8 @@ import {
 
 export function Sidebar() {
 	return (
-		<aside className=" w-full h-full fixed z-20">
-			<div className="w-full h-full fixed  z-30 filter blur-sm bg-black opacity-30"></div>
-			<div className="gap-12 sticky top-4 flex items-start flex-col z-40">
+		<aside className="flex w-full h-screen fixed z-20 backdrop-blur-sm backdrop-brightness-150">
+			<div className="flex absolute gap-12 w-96 h-screen p-8 bg-black items-start flex-col z-40 ">
 				<div className="">
 					<span className="font-bold text-gray-400">GERAL</span>
 					<div className="flex gap-4 mt-6 items-stretch flex-col">
