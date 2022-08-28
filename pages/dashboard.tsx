@@ -117,7 +117,7 @@ export const DashboardPage = () => {
 			<Header />
 			<div className="flex w-full max-w-screen-2xl my-6 mx-auto px-6 relative">
 				<div className="w-full flex flex-col xl:flex-row gap-4">
-					<div className="">
+					<div className="w-3/4 bg-white">
 						<div className="flex-1 flex mb-4 flex-col justify-between shadow-lg bg-white dark:bg-[#151a1e] rounded-lg p-8">
 							<div className="flex items-center justify-between border-b-2 border-b-slate-200 dark:border-b-slate-700 pb-4">
 								<div className="flex flex-col">

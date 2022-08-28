@@ -3,7 +3,6 @@ import {
 	RiDashboardLine,
 	RiGitMergeLine,
 	RiInputMethodLine,
-	RiArrowLeftLine,
 	RiArrowRightLine,
 	RiLogoutBoxLine
 } from "react-icons/ri";
@@ -11,7 +10,7 @@ import classNames from "classnames";
 import { useState } from "react";
 
 export function Sidebar() {
-	const [sidebarExpanded, setSidebarExpanded] = useState(false)
+	const [ sidebarExpanded, setSidebarExpanded ] = useState(false)
 
 	return (
 		//expanded
@@ -24,11 +23,7 @@ export function Sidebar() {
 			)}
 		>
 			<div 
-				className={classNames(
-					"flex justify-between flex-col absolute h-screen px-8 py-8 bg-black z-40 ",
-					{"w-60": sidebarExpanded},
-					{"items-center": !sidebarExpanded}
-				)}
+				className={`${sidebarExpanded ? "w-60": "w-28"} duration-300 flex justify-between flex-col absolute h-screen px-8 py-8 bg-black z-40 `}
 			>
 				<div className="flex gap-12 flex-col">
 					<span className="text-3xl font-medium tracking-tight">
@@ -37,7 +32,7 @@ export function Sidebar() {
 					</span>
 					<div className="">
 						<span className="font-bold text-gray-400">GERAL</span>
-						<div className="flex gap-4 mt-6 flex-col">
+						<div className={`flex gap-4 mt-6 flex-col `}>
 							<a href="" className="flex items-center gap-4 text-pink-400">
 								<RiDashboardLine size={25} />
 								<span className={classNames(
@@ -98,7 +93,7 @@ export function Sidebar() {
 					</div>
 				</div>
 				<button 
-					className="bg-pink-500 p-1 rounded-full absolute right-[-10px] mt-2" 
+					className={`${sidebarExpanded? "rotate-180": ""} duration-500  bg-pink-500 p-1 rounded-full absolute right-[-10px] mt-2 border-2 border-black`}
 					onClick={()=>setSidebarExpanded(!sidebarExpanded)}
 				>
 					<RiArrowRightLine/>
