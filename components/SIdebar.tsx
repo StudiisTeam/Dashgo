@@ -72,22 +72,34 @@ export function Sidebar() {
 					</div>
 					<div className="">
 						<span className="font-bold text-gray-400">AUTO</span>
-						<div className="flex gap-4 mt-6 items-center flex-col">
+						<div className="flex gap-4 mt-6 flex-col">
 							<a href="" className="flex items-center gap-4 ">
 								<RiInputMethodLine size={25}/>
-								<span className="font-medium hidden">Formularios</span>
+								<span className={classNames(
+									"font-medium",
+									{"hidden":!sidebarExpanded }
+								)}>Formularios</span>
 							</a>
 							<a href="" className="flex items-center gap-4 ">
 								<RiGitMergeLine size={25}/>
-								<span className="font-medium hidden">Automacao</span>
+								<span className={classNames(
+									"font-medium",
+									{"hidden":!sidebarExpanded }
+								)}>Automacao</span>
 							</a>
 							<a href="" className="flex items-center gap-4 ">
 								<RiGitMergeLine size={25}/>
-								<span className="font-medium hidden">Auto</span>
+								<span className={classNames(
+									"font-medium",
+									{"hidden":!sidebarExpanded }
+								)}>Auto</span>
 							</a>
 							<a href="" className="flex items-center gap-4 ">
 								<RiGitMergeLine size={25}/>
-								<span className="font-medium hidden">Automacao</span>
+								<span className={classNames(
+									"font-medium",
+									{"hidden":!sidebarExpanded }
+								)}>Automacao</span>
 							</a>
 						</div>
 					</div>
