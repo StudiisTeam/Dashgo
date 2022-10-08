@@ -279,7 +279,7 @@ export const DashboardPage = () => {
 								<div className="flex mt-4 items-center justify-between">
 									<div className="flex items-center gap-3">
 										<div className="bg-white flex items-center justify-center w-8 h-8 rounded-full">
-											<Image width={20} height={20} src={netflixLogo} alt="" />
+											<Image width={25} height={25} src={netflixLogo} alt="" />
 										</div>
 										<div className="flex flex-col">
 											<span>Netflix</span>
